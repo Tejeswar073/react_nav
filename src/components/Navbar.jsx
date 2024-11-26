@@ -10,7 +10,7 @@ function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="text-xl font-bold">
-              MyApp
+              Our App
             </a>
           </div>
 

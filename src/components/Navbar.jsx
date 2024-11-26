@@ -10,23 +10,23 @@ function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="text-xl font-bold">
-              Our App
+              Inventory
             </a>
           </div>
 
           {/* Menu Items */}
           <div className="hidden md:flex space-x-4">
             <a href="/" className="hover:text-gray-200">
-              Home
+              Home page
             </a>
             <a href="/about" className="hover:text-gray-200">
-              About
+              About Page
             </a>
             <a href="/services" className="hover:text-gray-200">
-              Services
+              Services Page
             </a>
             <a href="/contact" className="hover:text-gray-200">
-              Contact
+              Contact Page
             </a>
           </div>
 

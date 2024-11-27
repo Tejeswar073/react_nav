@@ -1,0 +1,106 @@
+/* Navbar styles */
+.navbar {
+    background-color: #dc2626;
+    /* Red-600 */
+    color: white;
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-container {
+    /* max-width: 1120px; */
+    /* Matches max-w-7xl */
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    /* Matches h-16 */
+}
+
+.logo a {
+    font-size: 1.25rem;
+    /* Matches text-xl */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-items {
+    display: none;
+    /* Hidden by default */
+}
+
+.menu-items a {
+    margin-left: 16px;
+    /* Matches space-x-4 */
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.menu-items a:hover {
+    color: #e5e7eb;
+    /* Matches hover:text-gray-200 */
+}
+
+.mobile-menu-button {
+    display: block;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 24px;
+    /* Matches w-6 */
+    height: 24px;
+    /* Matches h-6 */
+}
+
+.mobile-menu {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.2s;
+}
+
+.mobile-menu a:hover {
+    background-color: #3b82f6;
+    /* Matches hover:bg-blue-500 */
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .menu-items {
+        display: flex;
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .mobile-menu {
+        display: flex;
+    }
+}

@@ -1,43 +1,31 @@
 import { useState } from 'react';
+import './Navbar.css'; // Import the new CSS file
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-red-600 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-content">
           {/* Logo */}
-          <div className="flex items-center">
-            <a href="/" className="text-xl font-bold">
-              Inventory
-            </a>
+          <div className="logo">
+            <a href="/">Inventory</a>
           </div>
 
           {/* Menu Items */}
-          <div className="hidden md:flex space-x-4">
-            <a href="/" className="hover:text-gray-200">
-              Home page
-            </a>
-            <a href="/about" className="hover:text-gray-200">
-              About Page
-            </a>
-            <a href="/services" className="hover:text-gray-200">
-              Services Page
-            </a>
-            <a href="/contact" className="hover:text-gray-200">
-              Contact Page
-            </a>
+          <div className="menu-items">
+            <a href="/">Home page</a>
+            <a href="/about">About Page</a>
+            <a href="/services">Services Page</a>
+            <a href="/contact">Contact Page</a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
-            >
+          <div className="mobile-menu-button">
+            <button onClick={() => setIsOpen(!isOpen)} className="menu-toggle">
               <svg
-                className="w-6 h-6"
+                className="menu-icon"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -57,19 +45,11 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden">
-          <a href="/" className="block px-4 py-2 hover:bg-blue-500">
-            Home
-          </a>
-          <a href="/about" className="block px-4 py-2 hover:bg-blue-500">
-            About
-          </a>
-          <a href="/services" className="block px-4 py-2 hover:bg-blue-500">
-            Services
-          </a>
-          <a href="/contact" className="block px-4 py-2 hover:bg-blue-500">
-            Contact
-          </a>
+        <div className="mobile-menu">
+          <a href="/">Home</a>
+          <a href="/about">About</a>
+          <a href="/services">Services</a>
+          <a href="/contact">Contact</a>
         </div>
       )}
     </nav>
